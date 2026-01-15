@@ -69,14 +69,22 @@
 
   <main class="container py-4 animate-fade-in">
     <!-- Welcome Header -->
-    <header class="welcome-header mb-4 animate-slide-up">
-      <div class="d-flex align-items-center">
-        <div class="me-3 logo">📈</div>
+    <header class="modern-header mb-4">
+      <div class="d-flex align-items-center justify-content-between">
         <div>
-          <h1 class="h3 mb-1 text-gradient" data-i18n="dashboard_title">আপনার ব্যবসার ড্যাশবোর্ড</h1>
-          <p class="text-muted small mb-0" data-i18n="dashboard_subtitle">
-            একটি বাটনে ক্লিক করুন → পূর্বাভাস, সঠিক দাম এবং বিক্রয় বৃদ্ধির পরামর্শ পান
+          <h1 class="header-title mb-1">
+            <span class="bangla-title">আপনার অপটিমাইজার</span>
+            <span class="english-title">- Market Optimizer</span>
+            <span class="header-icon">⚙️</span>
+          </h1>
+          <p class="header-subtitle mb-0">
+            <span class="subtitle-icon">🤖</span> AI eCommerce Dashboard
           </p>
+        </div>
+        <div class="header-actions">
+          <button id="langToggle" class="btn btn-sm btn-outline-primary">
+            <span id="langText">EN</span>
+          </button>
         </div>
       </div>
     </header>
@@ -111,72 +119,84 @@
             </div>
 
             <div class="col-md-6">
-              <label class="form-label fw-bold">কি জানতে চান?</label>
-              <div class="action-grid">
-                <button class="action-card" id="btnForecast" title="পরবর্তী ৩০ দিনের বিক্রয় পূর্বাভাস">
-                  <div class="action-icon">📊</div>
-                  <div class="action-text" data-i18n="btn_forecast">চাহিদা পূর্বাভাস</div>
-                  <small class="action-hint">পরবর্তী মাসের বিক্রয়</small>
-                </button>
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="action-grid-modern">
+                    <!-- Demand Forecast - Blue -->
+                    <button class="color-card card-blue" id="btnForecast" title="চাহিদা পূর্বাভাস">
+                      <div class="card-icon">📊</div>
+                      <div class="card-title">চাহিদা পূর্বাভাস</div>
+                      <div class="card-subtitle">Demand Forecast</div>
+                    </button>
 
-                <button class="action-card" id="btnPrice" title="সঠিক দাম জানুন">
-                  <div class="action-icon">💰</div>
-                  <div class="action-text" data-i18n="btn_price">সঠিক দাম</div>
-                  <small class="action-hint">লাভজনক মূল্য</small>
-                </button>
+                    <!-- Price Optimize - Green -->
+                    <button class="color-card card-green" id="btnPrice" title="দাম অপটিমাইজ করুন">
+                      <div class="card-icon">💰</div>
+                      <div class="card-title">দাম অপটিমাইজ</div>
+                      <div class="card-subtitle">Price Optimize</div>
+                    </button>
 
-                <button class="action-card" id="btnRecommend" title="কোন পণ্য বেশি রাখবেন">
-                  <div class="action-icon">⭐</div>
-                  <div class="action-text" data-i18n="btn_recommend">সুপারিশ</div>
-                  <small class="action-hint">জনপ্রিয় পণ্য</small>
-                </button>
+                    <!-- Product Recommendation - Yellow -->
+                    <button class="color-card card-yellow" id="btnRecommend" title="পণ্য সুপারিশ">
+                      <div class="card-icon">⭐</div>
+                      <div class="card-title">পণ্য সুপারিশ</div>
+                      <div class="card-subtitle">Top Products</div>
+                    </button>
 
-                <button class="action-card" id="btnSocial" title="মানুষ কি বলছে">
-                  <div class="action-icon">😊</div>
-                  <div class="action-text" data-i18n="btn_social">জনমত</div>
-                  <small class="action-hint">কাস্টমারের মতামত</small>
-                </button>
+                    <!-- Social Sentiment - Pink -->
+                    <button class="color-card card-pink" id="btnSocial" title="সামাজিক অনুভূতি">
+                      <div class="card-icon">😊</div>
+                      <div class="card-title">সামাজিক অনুভূতি</div>
+                      <div class="card-subtitle">Social Buzz</div>
+                    </button>
 
-                <button class="action-card" id="btnStock" title="স্টক সতর্কতা">
-                  <div class="action-icon">📦</div>
-                  <div class="action-text">স্টক সতর্কতা</div>
-                  <small class="action-hint">মজুদ বিশ্লেষণ</small>
-                </button>
+                    <!-- Stock Alert - Orange -->
+                    <button class="color-card card-orange" id="btnStock" title="স্টক সতর্কতা">
+                      <div class="card-icon">📦</div>
+                      <div class="card-title">স্টক সতর্কতা</div>
+                      <div class="card-subtitle">Stock Alert</div>
+                    </button>
 
-                <button class="action-card" id="btnTrends" title="বিক্রয় প্রবণতা">
-                  <div class="action-icon">📈</div>
-                  <div class="action-text">বিক্রয় প্রবণতা</div>
-                  <small class="action-hint">সেরা বিক্রয় দিন</small>
-                </button>
+                    <!-- Sales Trends - Purple -->
+                    <button class="color-card card-purple" id="btnTrends" title="বিক্রয় প্রবণতা">
+                      <div class="card-icon">📈</div>
+                      <div class="card-title">বিক্রয় প্রবণতা</div>
+                      <div class="card-subtitle">Sales Trends</div>
+                    </button>
 
-                <button class="action-card" id="btnCustomer" title="ক্রেতা বিশ্লেষণ">
-                  <div class="action-icon">👥</div>
-                  <div class="action-text">ক্রেতা বিশ্লেষণ</div>
-                  <small class="action-hint">সেরা ক্রেতা</small>
-                </button>
+                    <!-- Customer Insights - Teal -->
+                    <button class="color-card card-teal" id="btnCustomer" title="ক্রেতা বিশ্লেষণ">
+                      <div class="card-icon">👥</div>
+                      <div class="card-title">ক্রেতা বিশ্লেষণ</div>
+                      <div class="card-subtitle">Customer Insights</div>
+                    </button>
 
-                <button class="action-card" id="btnProfit" title="লাভ ক্যালকুলেটর">
-                  <div class="action-icon">💵</div>
-                  <div class="action-text">লাভ ক্যালকুলেটর</div>
-                  <small class="action-hint">মার্জিন বিশ্লেষণ</small>
-                </button>
+                    <!-- Profit Calculator - Emerald -->
+                    <button class="color-card card-emerald" id="btnProfit" title="লাভ ক্যালকুলেটর">
+                      <div class="card-icon">💵</div>
+                      <div class="card-title">লাভ ক্যালকুলেটর</div>
+                      <div class="card-subtitle">Profit Margin</div>
+                    </button>
 
-                <button class="action-card" id="btnSeasonal" title="মৌসুমী পূর্বাভাস">
-                  <div class="action-icon">🌟</div>
-                  <div class="action-text">মৌসুমী পূর্বাভাস</div>
-                  <small class="action-hint">ঈদ/রমজান</small>
-                </button>
+                    <!-- Seasonal Predictor - Amber -->
+                    <button class="color-card card-amber" id="btnSeasonal" title="মৌসুমী পূর্বাভাস">
+                      <div class="card-icon">🌟</div>
+                      <div class="card-title">মৌসুমী পূর্বাভাস</div>
+                      <div class="card-subtitle">Festive Sales</div>
+                    </button>
 
-                <button class="action-card" id="btnMarketing" title="মার্কেটিং পরিকল্পনা">
-                  <div class="action-icon">🎯</div>
-                  <div class="action-text">মার্কেটিং পরিকল্পনা</div>
-                  <small class="action-hint">ক্যাম্পেইন কৌশল</small>
-                </button>
+                    <!-- Marketing Planner - Red -->
+                    <button class="color-card card-red" id="btnMarketing" title="মার্কেটিং পরিকল্পনা">
+                      <div class="card-icon">🎯</div>
+                      <div class="card-title">মার্কেটিং</div>
+                      <div class="card-subtitle">Campaign Plan</div>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
 
     <!-- Results Section -->

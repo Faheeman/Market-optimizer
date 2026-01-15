@@ -413,10 +413,21 @@ async function handleChat() {
 
     input.value = '';
 
+
     try {
-      const promptWithLang = currentLang === 'bn'
-        ? `অনুগ্রহ করে বাংলায় উত্তর দিন: ${q}`
-        : q;
+      // Detect if user typed in Bengali (check for Bengali Unicode characters)
+      const hasBengali = /[\u0980-\u09FF]/.test(q);
+
+      // Create strong language-specific prompt
+      let promptWithLang;
+      if (hasBengali || currentLang === 'bn') {
+        // Strong Bengali instruction
+        promptWithLang = `আপনাকে অবশ্যই সম্পূর্ণ বাংলায় উত্তর দিতে হবে। কোনো ইংরেজি শব্দ ব্যবহার করবেন না। প্রশ্ন: ${q}
+
+CRITICAL: You MUST respond ONLY in Bengali language. Do NOT use any English words. Answer the question in Bengali only.`;
+      } else {
+        promptWithLang = q;
+      }
 
       const resp = await fetch(
         `/api/chat/stream?product=${encodeURIComponent(product)}&include_context=true`,
