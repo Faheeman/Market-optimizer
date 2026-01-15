@@ -67,7 +67,7 @@ Market Optimizer is **not just another analytics tool** - it's a complete AI-pow
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/market-optimizer.git
+git clone https://github.com/pythonicshariful/market-optimizer.git
 cd market-optimizer
 
 # Install dependencies
@@ -417,7 +417,7 @@ If this project helped your business, please ⭐ star it on GitHub!
 ### 🎯 Ready to Transform Your Business?
 
 ```bash
-git clone https://github.com/yourusername/market-optimizer.git
+git clone https://github.com/pythonicshariful/market-optimizer.git
 cd market-optimizer
 pip install -r requirements.txt
 python app.py

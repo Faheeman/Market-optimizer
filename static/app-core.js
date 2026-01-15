@@ -157,15 +157,11 @@ function toggleTheme() {
 }
 
 // === Toast Notifications ===
+// DISABLED - No toast messages shown to users
 function showToast(msg, type = 'info') {
-  const el = document.createElement('div');
-  el.className = `toast-msg ${type === 'error' ? 'toast-error' : 'toast-info'}`;
-  el.innerText = msg;
-  document.body.appendChild(el);
-
-  requestAnimationFrame(() => el.classList.add('visible'));
-  setTimeout(() => el.classList.remove('visible'), 4200);
-  setTimeout(() => el.remove(), 5000);
+  // Silently log to console only, don't show to user
+  console.log(`[Toast ${type}]:`, msg);
+  // Do nothing - no visual toast appears
 }
 
 // Show results in unified area

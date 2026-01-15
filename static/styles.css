@@ -1866,3 +1866,88 @@ footer {
 [data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
     background: #667eea;
 }
+
+/* Unified Results Section */
+.unified-results-card {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border: none;
+  border-radius: 16px;
+  animation: slideInUp 0.3s ease-out;
+}
+
+.unified-results-card .card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 16px 16px 0 0;
+  padding: 20px;
+}
+
+.unified-results-card .card-body {
+  padding: 30px;
+  min-height: 300px;
+}
+
+.empty-state-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Dark mode for unified results */
+[data-theme='dark'] .unified-results-card {
+  background: var(--card-bg);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+[data-theme='dark'] .empty-state-icon {
+  opacity: 0.7;
+}
+
+/* Chart Container Sizing */
+#resultsContent canvas {
+  max-height: 400px !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.chart-container {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#resultsContent {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+/* Better scrollbar for results */
+#resultsContent::-webkit-scrollbar {
+  width: 8px;
+}
+
+#resultsContent::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+#resultsContent::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
