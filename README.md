@@ -87,16 +87,16 @@ python app.py
 🎉 **That's it!** Open [http://localhost:5000](http://localhost:5000)
 
 ---
-
+![alt text](image.png)
 ## 📸 Screenshots
 
 ### Dashboard Overview
-![Dashboard](C:/Users/pytho/.gemini/antigravity/brain/dd8b771b-b9ad-4455-9a53-7cab8611fc2c/dashboard_screenshot_1768491588993.png)
+![Dashboard](Dashboard.png)
 
 *10 powerful AI features at your fingertips*
 
 ### AI Business Consultant
-![Chat Interface](C:/Users/pytho/.gemini/antigravity/brain/dd8b771b-b9ad-4455-9a53-7cab8611fc2c/chat_interface_1768491613242.png)
+![Chat Interface](ChatInterface.png![alt text](image.png))
 
 *Ask questions in Bengali, get instant AI-powered advice*
 

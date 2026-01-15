@@ -346,3 +346,6 @@
 2026-01-15 22:40:09,823:WARNING:D:\hackerthon\Market-optimizer\models.py:14: RuntimeWarning: PyCaret not available or incompatible with this Python version. Some features will be disabled.
   warnings.warn("PyCaret not available or incompatible with this Python version. Some features will be disabled.", RuntimeWarning)
 
+2026-01-15 22:42:44,116:WARNING:D:\hackerthon\Market-optimizer\models.py:14: RuntimeWarning: PyCaret not available or incompatible with this Python version. Some features will be disabled.
+  warnings.warn("PyCaret not available or incompatible with this Python version. Some features will be disabled.", RuntimeWarning)
+
